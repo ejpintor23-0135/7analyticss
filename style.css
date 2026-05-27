@@ -34,6 +34,7 @@ body::before{
   left:-100px;
   z-index:-1;
 }
+
 body::after{
   content:"";
   position:fixed;
@@ -136,7 +137,7 @@ section{
   padding:30px;
   border-radius:15px;
   box-shadow:0 8px 20px rgba(0,0,0,0.4);
-  border-left: 4px solid var(--accent);
+  border-left:4px solid var(--accent);
   transition:all 0.3s ease;
 }
 
@@ -167,6 +168,11 @@ section:hover{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:20px;
+}
+
+.projects a{
+  text-decoration:none;
+  color:inherit;
 }
 
 .card{
@@ -247,4 +253,33 @@ footer{
   font-size:13px;
   color:var(--muted);
   border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding:50px 25px;
+  }
+
+  .hero-text h1{
+    font-size:32px;
+  }
+
+  .hero-text p{
+    max-width:100%;
+  }
+
 }
